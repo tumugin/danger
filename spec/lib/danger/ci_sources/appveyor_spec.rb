@@ -15,7 +15,7 @@ RSpec.describe Danger::AppVeyor do
     }
   end
 
-  let(:source) {described_class.new(valid_env)}
+  let(:source) { described_class.new(valid_env) }
 
   describe ".validates_as_pr?" do
     it "validates when the required env variables are set" do
