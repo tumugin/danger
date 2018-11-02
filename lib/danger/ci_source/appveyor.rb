@@ -2,6 +2,20 @@
 module Danger
   # ### CI Setup
   #
+  # Install dependencies and add a danger step to your appveyor.yml:
+  # ```yaml
+  # install:
+  # - cmd: >-
+  #     set PATH=C:\Ruby25-x64\bin;%PATH%
+  #
+  #     bundle install
+  # after_test:
+  # - cmd: >-
+  #     bundle exec danger
+  # ```
+  #
+  # ### Token Setup
+  # 
   class AppVeyor < CI
     def self.validates_as_ci?(env)
       env.key? "APPVEYOR"
